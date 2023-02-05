@@ -9,7 +9,7 @@ public class T3_cssSelector {
     public static void main(String[] args) {
 
         //TC #3: NextBaseCRM, locators, getText(), getAttribute() practice
-        //1- Open a chrome browser
+        //1- Open a Chrome browser
         WebDriver driver = WebDriverFactory.getDriver("chrome");
         driver.manage().window().maximize();
 
@@ -18,18 +18,34 @@ public class T3_cssSelector {
 
         //3- Verify “Log in” button text is as expected:
         //Expected: Log In
-        // locating login button using class attribute's value
-        //WebElement loginBtn = driver.findElement(By.className("login-btn"));
+        String expectedLoginText = "Log In";
 
-        // locating by using cssLocator using type attributes value
-      //  WebElement loginBtn = driver.findElement(By.cssSelector( "input[value='Log In']" ) );
-        WebElement loginBtn = driver.findElement(By.cssSelector( "input [ type='submit'] " ) );
+        //Locating loginButton using class attribute's value
+        //WebElement loginButton = driver.findElement(By.className("login-btn"));
+
+        //                                  tagName[attribute='value']
+
+        //Locating loginButton using cssSelector using type attribute's value
+        //WebElement loginButton = driver.findElement(By.cssSelector("input[type='submit']"));
+
+        //Locating loginButton using cssSelector using class attribute's value
+        //WebElement loginButton = driver.findElement(By.cssSelector("input[class='login-btn']"));
+
+        //Locating loginButton using cssSelector using value attribute's value
+        //WebElement loginButton = driver.findElement(By.cssSelector("input[value='Log In']"));
+
+        //Locating loginButton using cssSelector using class attribute's value
+        //                                        tagName.classValue
+        WebElement loginButton = driver.findElement(By.cssSelector("input.login-btn"));
 
 
+        String actualLoginText = loginButton.getAttribute("value"); //--> Log In
 
-        //PS: Inspect and decide which locator you should be using to locate web
-        //elements.
-        //PS2: Pay attention to where to get the text of this button from
+        if (actualLoginText.equals(expectedLoginText)){
+            System.out.println("Log In button text verification PASSED!");
+        }else {
+            System.out.println("Log In button text verification FAILED!");
+        }
 
 
     }
