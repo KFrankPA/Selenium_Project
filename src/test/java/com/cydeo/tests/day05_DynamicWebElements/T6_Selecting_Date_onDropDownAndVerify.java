@@ -31,16 +31,17 @@ public class T6_Selecting_Date_onDropDownAndVerify {
     @Test
     public void test1(){
 
-        Select select = new Select(driver.findElement(By.xpath("//select[@id='year']")));
         String actual;
+        String expected;
+        Select select = new Select(driver.findElement(By.xpath("//select[@id='year']")));
         select.selectByVisibleText("1988");
 
-        String expected = "1988";
+        expected = "1988";
         actual = select.getFirstSelectedOption().getText();
         Assert.assertEquals(actual,expected);
 
         select = new Select(driver.findElement(By.xpath("//select[@id='month']")));
-        select.selectByVisibleText("July");
+        select.selectByIndex(6);
         actual = select.getFirstSelectedOption().getText();
         expected = "July";
         Assert.assertTrue(actual.equalsIgnoreCase(expected));
