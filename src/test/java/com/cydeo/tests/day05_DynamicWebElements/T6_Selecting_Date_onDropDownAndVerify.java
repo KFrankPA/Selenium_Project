@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 
 import java.time.Duration;
 
-public class T6Selecting_Date_onDropDownAndVerify {
+public class T6_Selecting_Date_onDropDownAndVerify {
 
     WebDriver driver;
 

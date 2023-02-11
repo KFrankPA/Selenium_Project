@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 
 import java.time.Duration;
 
-public class T7SelectStateFromStateDropDown {
+public class T7_SelectStateFromStateDropDown {
 
     WebDriver driver;
     //TC #7: Selecting state from State dropdown and verifying result
