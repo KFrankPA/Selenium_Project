@@ -35,7 +35,7 @@ public class T8_SelectingValueFromNonSelectDropdown {
 
         WebElement button = driver.findElement(By.xpath("//a[@id='dropdownMenuLink']"));
         button.click();
-        WebElement fb = driver.findElement(By.partialLinkText("acebook"));
+        WebElement fb = driver.findElement(By.partialLinkText("Facebook"));
         fb.click();
 
         //3. Click to non-select dropdown

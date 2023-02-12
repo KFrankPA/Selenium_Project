@@ -46,7 +46,7 @@ public class T7_SelectStateFromStateDropDown {
         String expected = "California";
         String actual = select.getFirstSelectedOption().getText();
 
-        Assert.assertTrue(expected.equalsIgnoreCase(actual));
+       Assert.assertTrue(actual.equalsIgnoreCase(expected),"Ooops");
 
     }
     //3. Select Illinois
