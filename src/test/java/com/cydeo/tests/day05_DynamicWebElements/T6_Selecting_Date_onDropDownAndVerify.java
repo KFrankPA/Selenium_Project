@@ -34,6 +34,7 @@ public class T6_Selecting_Date_onDropDownAndVerify {
         String actual;
         String expected;
         Select select = new Select(driver.findElement(By.xpath("//select[@id='year']")));
+
         select.selectByVisibleText("1988");
 
         expected = "1988";
