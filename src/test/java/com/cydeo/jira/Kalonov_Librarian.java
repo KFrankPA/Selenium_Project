@@ -11,7 +11,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import java.time.Duration;
-public class Kalonpv_Librarian {
+public class Kalonov_Librarian {
     //As a librarian, I should be able to edit the books' information.
     //
     //1 Verify the librarian can edit any book info from the books page.
@@ -29,7 +29,7 @@ public class Kalonpv_Librarian {
     @Test
 
     public void AC1_Edit_Button_IsDisplayed(){
-        driver.get(ConfigurationReader.getProperty("env"));
+        driver.get(ConfigurationReader.getProperty("website"));
         BrowserUtils.sleep(2);
 
         WebElement loginBox = driver.findElement(By.xpath("//input[@id='inputEmail']"));
@@ -46,7 +46,23 @@ public class Kalonpv_Librarian {
 
         driver.findElement(By.xpath("//a[@href='#books']//span[1]")).click();
 
-       // Assert.assertTrue(driver.findElement(By.xpath("//a[contains(@onclick, 'Books.edit_book')]")).isDisplayed());
+        Assert.assertTrue(driver.findElement(By.xpath("//a[contains(@onclick, 'Books.edit_book')]")).isDisplayed());
+
+
+        driver.findElement(By.xpath("//a[contains(@onclick, 'Books.edit_book')]")).click();
+
+        BrowserUtils.sleep(3);
+        driver.findElement(By.xpath("//input[@name='name']")).clear();
+
+        driver.findElement(By.xpath("//input[@name='name']")).sendKeys("Hello Team Nova");
+
+        BrowserUtils.sleep(5);
+
+        Assert.assertTrue(driver.findElement(By.xpath("//button[@type='submit']")).isDisplayed());
+
+        driver.findElement(By.xpath("//button[@type='submit']")).click();
+
+
 
     }
 
