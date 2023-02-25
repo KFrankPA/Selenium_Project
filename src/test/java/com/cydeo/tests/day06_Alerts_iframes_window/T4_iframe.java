@@ -37,7 +37,7 @@ public class T4_iframe {
         // driver.switchTo().frame(0); //by index number
         driver.switchTo().frame("//iframe[@id='mce_0_ifr']"); // using a web element locator
 
-
+//
         WebElement paragraphText = driver.findElement(By.xpath("//p[.='Your content goes here.']"));
         //4. Assert: “Your content goes here.” Text is displayed.
         Assert.assertTrue(paragraphText.isDisplayed());
