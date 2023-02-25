@@ -35,7 +35,7 @@ public class T4_iframe {
         //option #1 switch "id" attribute value
         // driver.switchTo().frame("mce_0_ifr"); // by id
         // driver.switchTo().frame(0); //by index number
-        driver.switchTo().frame("//iframe[@id='mce_0_ifr']"); // using a web element locator
+        driver.switchTo().frame(driver.findElement(By.xpath("//iframe[@id='mce_0_ifr']"))); // using a web element locator
 
 //
         WebElement paragraphText = driver.findElement(By.xpath("//p[.='Your content goes here.']"));
