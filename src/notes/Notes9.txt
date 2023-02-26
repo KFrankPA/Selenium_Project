@@ -82,7 +82,7 @@ Notes7.txtToday's schedule:
           - In software engineering, a design pattern is a general repeatable solution to a commonly occurring problem in software design.
 
           - We will use "SINGLETON DESIGN PATTERN"
-          - Singleton Design Pattern guarantuees to return the same object EVERYTIME we want to use the object.
+          - Singleton Design Pattern guarantees to return the same object EVERYTIME we want to use the object.
 
           - How do we implement/apply the Singleton Design Pattern?
 

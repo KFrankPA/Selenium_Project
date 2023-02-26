@@ -1,5 +1,6 @@
 package com.cydeo.tests.day05_DynamicWebElements;
 
+import com.cydeo.utilities.ConfigurationReader;
 import com.cydeo.utilities.WebDriverFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.StaleElementReferenceException;
